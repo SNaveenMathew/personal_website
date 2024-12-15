@@ -3,7 +3,7 @@ const { withAnimations } = require('animated-tailwindcss');
 const palette = require('./palette');
 
 module.exports = withAnimations({
-  content: ['./src/**/*.html'],
+  content: ['./**/*.html'],
   presets: [],
   darkMode: 'class', // or 'media'
   theme: {
