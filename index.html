@@ -1,6 +1,18 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
+    <style>
+    .center {
+        margin: auto;
+        width: 60%;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .hideform {
+        display: none;
+    }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio HTML + CSS</title>
@@ -200,13 +212,12 @@
               </h2>
               <p class="font-normal text-base text-lightgray-600 dark:text-darkgray-600">
                 I'm a (data) scientist with 9.5 years of industry experience in machine learning R&D. I'm currently working on solving real-world healthcare problems using a combination of observational and experimental data. My work often sits in the intersection of data engineering, data science, ML engineering and statistical modeling. I try to solve problems from first principles of mathematics, computational algorithms.
-                
-                I'm deeply interested in mathematical and computational foundations of machine learning and deep learning. I'm also interested in creating data pipelines and 'AutoML' (including unsupervised learning, which is often ignored by AutoML services in popular Clouds like AWS). In the past I increased the efficiency of clients across various domains by creating optimized and automated pipelines for supervised and unsupervised learning (some articles are written here)[].
-                
-                I'm always curious about understanding how things work - eg: I completely disassembled and reassembled a PC when I was in middle school. This curiosity extends to ML theory - where I disassemble some questions by fitting models to a simple toy data set, and try to reassemble the 'hints' into foundational building blocks (~knowledge) by using mathematical and diasnostic techniques, or plain intuition (sometimes not mathematically sound). My curiosity extends beyond model building because my goal is to do science using data - eg: I learnt to build data visualization from a blank canvas using Vega-lite when I was the Teaching Assistant for [IS 590 - Data Visualization](https://courses.illinois.edu/schedule/2019/fall/IS/590) under [Prof. Matthew Turk](https://ischool.illinois.edu/people/matthew-turk). Though I have some opinions on the state of our current theoretical understanding of deep learning, I don't take sides when it comes to models that work in the real world.
-                
-                I occasionally write articles driven by first principles in (my blog)[https://snaveenmathew.github.io/stat_ml_blog/] - meant for technical/mathematical audience. I acknowledge the need for a problem solving approach at work, and share my industry experiences and expertise in a (different blog)[] - meant for industry audience.
-                
+                <br></br>
+                I'm deeply interested in mathematical and computational foundations of machine learning and deep learning. I maintain two different blogs:
+              <ul>
+                <li><a href="https://snaveenmathew.github.io/stat_ml_blog/">Machine/Deep Learning blog</a></a> - discussing theoretical and practical aspects of machine learning from first principles</li>
+                <li><a href="">Link</a> - A blog on innovative industry solutions I worked on in the past</li>
+              </ul>
               </p>
             </div>
             <div class="flex flex-col gap-2">
@@ -350,22 +361,64 @@
             <div class="flex lg:w-1/2">
               <div class="flex flex-col gap-6">
                 <h3 class="font-semibold text-2xl lg:text-3xl text-left text-lightgray-900 dark:text-darkgray-900">
-                  Curious about me? Here you have it:
+                  Why am I doing what I'm doing?
                 </h3>
                 <p class="font-normal text-base text-lightgray-600 dark:text-darkgray-600">
-                  I'm a passionate, self-proclaimed designer who specializes in full stack development (React.js & Node.js). I am very
-                  enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel perfect
-                  design, and writing clear, readable, highly performant code matters to me.
+                Short answer: It's complicated; I asked myself some deeply personal and philosophical questions during the lowest point in my career (aka MBA) to distract myself from the toxicity and lack of education. In the end I concluded that the pursuit of my childhood dream (to become a scientist) will satisfy my "personal utility" goals even if it doesn't fulfill all the success criteria established by others around me.
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <div class="center hideform">
+                    <button id="close" style="float: right;">X</button>
+                    <div>
+                      <p>
+                        Long answer: As short as the short answer was, it took a lot of thinking and internal debates to answer those questions in a coherent way.
+                        <br></br>
+                        <a href="https://en.wikipedia.org/wiki/Neti_neti">Neti Neti</a>
+                        is a concept in Hinduism that involves finding the meaning of X by negating X'. Though this is a mathematically and logically sound method, it cannot be applied in practice to find one's profession/passion because nobody has infinite time to explore all career paths and nobody would give credit to irrelevant experiences. As creates limited by the finiteness of our lifespans we are forced to make (informed or uninformed) decisive choices with small sample sizes (sometimes as low as one).
+                        <br></br>
+                        Thanks to my rigorous undergraduate education, some tough personal and professional circumstances, and some timely guidance from <a href="https://www.mdi.ac.in/faculty/joydip-mitra">Prof. Joydip Mitra</a>, I understood how I could live an enriching life (personal and professional) after wasting 2 years on MBA. I quickly realized I hadn't deviated too far away from my childhood goal, and that I could accomplish the goal if I was willing to commit blood, sweat and tears to a path that was intellectually awakening (but not so financially attractive, atleast not in the short term).
+                        <br></br>
+                        With Prof. Joydip's guidance I was able to identify Statistics as the area of interest - an area that <i>luckily</i> serves as a bridge in several areas of science, and almost all areas that involve data. Once I saw through the fog and saw light at the end of the tunnel, I dedicated myself to become a specialist in "everything about data". This approach may sound like a generalist or a jack-of-all-trades to some, but I consider knowing <b><i>almost</i> ALL</b> the algorithms as a way to know multiple ways of solving the same problem - like a "Swiss army knife" approach to science.
+                      </p>
+                    </div>
+                </div>
+                <button id="show">Explain yourself!</button>
+                <script>
+                $('#show').on('click', function () {
+                    $('.center').show();
+                    $(this).hide();
+                })
+                
+                $('#close').on('click', function () {
+                    $('.center').hide();
+                    $('#show').show();
+                })
+                </script>
                 </p>
                 <p class="font-normal text-base text-lightgray-600 dark:text-darkgray-600">
-                  I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on
-                  new challenges and learning the latest technologies along the way. Now, in my early thirties, 7 years after starting my
-                  web development journey, I'm building cutting-edge web applications using modern technologies such as Next.js, TypeScript,
-                  Nestjs, Tailwindcss, Supabase and much more.
+                  During the pursuit of my childhood dream I created value for companies while gaining exerpience through learnings - both positive and negative.
                 </p>
-                <p class="font-normal text-base text-lightgray-600 dark:text-darkgray-600">
-                  I am very much a progressive thinker and enjoy working on products end to end, from ideation all the way to development.
-                </p>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <div class="center hideform">
+                    <button id="close" style="float: right;">X</button>
+                    <div>
+                      <p>
+                        In this era of social media everyone wants to portray themselves as the epitome of an employee. However, psychology of the human mind makes it's easier to remember negative experiences over positive experiences. I've faced a few incidents in the past where my professional skill wasn't sufficient to deliver satisfactory results. Though I don't take professional shortcomings personally, I don't 
+                        </br>
+                      </p>
+                    </div>
+                </div>
+                <button id="show">Again, xplain yourself!</button>
+                <script>
+                $('#show').on('click', function () {
+                    $('.center').show();
+                    $(this).hide();
+                })
+                
+                $('#close').on('click', function () {
+                    $('.center').hide();
+                    $('#show').show();
+                })
+                </script>
                 <p class="font-normal text-base text-lightgray-600 dark:text-darkgray-600">
                   When I'm not in full-on developer mode, you can find me hovering around on twitter or on indie hacker, witnessing the
                   journey of early startups or enjoying some free time. You can follow me on Twitter where I share tech-related bites and
@@ -926,7 +979,7 @@
             </defs>
           </svg>
           <p class="font-normal text-sm text-lightgray-600 dark:text-darkgray-600">
-            2023 | Designed and coded with <span class="text-red-500">❤️</span> by Sagar Shah
+            2023 | Designed by <a href="https://sagarshah.dev/">Sagar Shah</a> and <a href="https://github.com/SNaveenMathew/personal_website">edited</a> by Naveen Sathiyanathan
           </p>
         </div>
       </footer>
