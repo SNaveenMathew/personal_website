@@ -2,14 +2,25 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <style>
-    .center {
+    .center1 {
         margin: auto;
         width: 90%;
         padding: 20px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     
-    .hideform {
+    .hideform1 {
+        display: none;
+    }
+    
+    .center2 {
+        margin: auto;
+        width: 90%;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .hideform2 {
         display: none;
     }
     </style>
@@ -366,8 +377,8 @@
                 <p class="font-normal text-base text-lightgray-600 dark:text-darkgray-600">
                 Short answer: It's complicated; I asked myself some deeply personal and philosophical questions during the lowest point in my career (aka MBA) to distract myself from the toxicity and lack of education. In the end I concluded that the pursuit of my childhood dream (to become a scientist) will satisfy my "personal utility" goals even if it doesn't fulfill all the success criteria established by others around me.
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                <div class="center hideform">
-                    <button id="close" style="float: right;">X</button>
+                <div id="popup1" class="center1 hideform1">
+                    <button id="close1" style="float: right;">X</button>
                     <div>
                       <p>
                         Long answer: As short as the short answer was, it took a lot of thinking and internal debates to answer those questions in a coherent way.
@@ -381,25 +392,25 @@
                       </p>
                     </div>
                 </div>
-                <button id="show">Explain yourself!</button>
+                <button id="show1">Explain yourself!</button>
                 <script>
-                $('#show').on('click', function () {
-                    $('.center').show();
+                $('#show1').on('click', function () {
+                    $('.center1').show();
                     $(this).hide();
                 })
                 
-                $('#close').on('click', function () {
-                    $('.center').hide();
-                    $('#show').show();
+                $('#close1').on('click', function () {
+                    $('.center1').hide();
+                    $('#show1').show();
                 })
                 </script>
                 </p>
                 <p class="font-normal text-base text-lightgray-600 dark:text-darkgray-600">
                   During the pursuit of my childhood dream I created value for companies while gaining exerpience through learnings - both positive and negative.
                 </p>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                <div class="center hideform">
-                    <button id="close" style="float: right;">X</button>
+                <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+                <div id="popup2" class="center2 hideform2">
+                    <button id="close2" style="float: right;">X</button>
                     <div>
                       <p>
                         In this era of social media everyone wants to portray themselves as the epitome of an employee. However, psychology of the human mind makes it's easier to remember negative experiences over positive experiences. I've faced a few incidents in the past where my professional skill wasn't sufficient to deliver satisfactory results. Though I don't take professional shortcomings personally, I don't 
@@ -407,16 +418,16 @@
                       </p>
                     </div>
                 </div>
-                <button id="show">Again, xplain yourself!</button>
+                <button id="show2">Again, explain yourself!</button>
                 <script>
-                $('#show').on('click', function () {
-                    $('.center').show();
+                $('#show2').on('click', function () {
+                    $('.center2').show();
                     $(this).hide();
                 })
                 
-                $('#close').on('click', function () {
-                    $('.center').hide();
-                    $('#show').show();
+                $('#close2').on('click', function () {
+                    $('.center2').hide();
+                    $('#show2').show();
                 })
                 </script>
                 <p class="font-normal text-base text-lightgray-600 dark:text-darkgray-600">
